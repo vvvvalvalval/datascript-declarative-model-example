@@ -112,9 +112,14 @@
   star-wars                                                 ;; a DataScript Entity is a lazy, Map-like view of the database, centered around a given entity.
   => {:db/id 2}
 
-  (type star-wars)
-  => datascript.impl.entity.Entity                          ;; although an Entity displays like a Map, it is not an ordinary Map.
+  (:movie/title star-wars)
+  => "Star Wars: a New Hope"
 
+  (:movie/release-year star-wars)
+  => 1977
+
+  (type star-wars)
+  => datascript.impl.entity.Entity                          ;; although an Entity looks like a Map, it is not an ordinary Map.
 
   (dt/touch star-wars)                                      ;; `dt/touch`: load all attributes in the Entity's cache.
   =>
