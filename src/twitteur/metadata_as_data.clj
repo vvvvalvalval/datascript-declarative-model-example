@@ -2,16 +2,16 @@
 
 (def domain-model-metadata
   {:types
-   [{:entity-type/name :twitteur/User
-     :entity-type/attributes
-     [{:attribute/name :user/email
-       :attribute.scalar/type :string
+   [{:twitteur.entity-type/name :twitteur/User
+     :twitteur.entity-type/attributes
+     [{:twitteur.attribute/name :user/email
+       :twitteur.attribute.scalar/type :string
        :twitteur.security/private? true}
-      {:attribute/name :user/tweets
-       :attribute/ref-typed? true
-       :attribute.ref-typed/type :twitteur/Tweet
-       :attribute.ref-typed/many? true}
+      {:twitteur.attribute/name :user/tweets
+       :twitteur.attribute/ref-typed? true
+       :twitteur.attribute.ref-typed/type :twitteur/Tweet
+       :twitteur.attribute.ref-typed/many? true}
       ...]}
-    {:entity-type/name :twitteur/Tweet
-     :entity-type/attributes
+    {:twitteur.entity-type/name :twitteur/Tweet
+     :twitteur.entity-type/attributes
      [...]}]})
