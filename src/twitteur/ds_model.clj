@@ -204,8 +204,3 @@
 ;; we just use the dml/... functions to assemble them in a more readable way.
 ;; In particular, you can evaluate any sub-expression above in the REPL and see exactly
 ;; how it translates to a data structure.
-(let [ns (range 1000000)
-      a {:numbers ns}
-      b {:numbers ns}]
-  (= a b))
-
